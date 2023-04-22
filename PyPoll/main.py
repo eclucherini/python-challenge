@@ -36,11 +36,6 @@ with open(csvpath) as voter_file:
         else:
             doane_votes += 1
 
-    # print(total_votes)
-    # print(stockham_votes)
-    # print(degette_votes)
-    # print(doane_votes)
-
 # Sort candidate_list alphabetically
 sorted_candidate_list = sorted(candidate_list)
 
@@ -53,16 +48,10 @@ for i in range(len(sorted_candidate_list)-1):
 last_candidate = sorted_candidate_list[len(sorted_candidate_list)-1]
 unique_candidates.append(last_candidate)
 
-# print(unique_candidates)
-
 # Calculate percentage of votes each candidate won
 stockham_votes_percent = stockham_votes/total_votes
 degette_votes_percent = degette_votes/total_votes
 doane_votes_percent = doane_votes/total_votes
-
-# print(stockham_votes_percent)
-# print(degette_votes_percent)
-# print(doane_votes_percent)
 
 # Put candidate vote counts into a list
 total_votes_by_candidate = [stockham_votes, degette_votes, doane_votes]
@@ -80,8 +69,6 @@ elif winner_votes == doane_votes:
     winner_name = "Raymon Anthony Doane"
 else:
     winner_name = "NO WINNER"
-
-# print(winner_name)
 
 # Create output txt file
 output_txt_file = os.path.join("Analysis","analysis.txt")

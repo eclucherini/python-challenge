@@ -34,9 +34,6 @@ with open(csvpath) as budget_file:
 
         dates.append(date_row)
         profits_losses.append(profit_loss_row)
-    
-      #   print(dates)
-      #   print(profits_losses)
 
         # Create list to calculate monthly change
         monthly_profit_change_list.append(row)
@@ -64,7 +61,6 @@ for i in range(0,len(profits_losses)):
 
 # Count total number of months in first column
 total_months = len(dates)
-print(total_months)
 
 # Sum total of Profit/Losses in second column
 def sum():
@@ -74,7 +70,6 @@ def sum():
     return sum
     
 total_profits = sum()
-print(total_profits)   
 
 # Create output txt file
 output_txt_file = os.path.join("Analysis","analysis.txt")
